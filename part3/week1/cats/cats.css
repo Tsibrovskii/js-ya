@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+section {
+    text-align: center;
+}
+.cart {
+    display: inline-block;
+    width: 500px;
+    margin: 30px 10px 30px 10px;
+}
+.image {
+    display: block;
+    text-align: left;
+}
+.image:hover {
+    opacity: 0.7;
+}
+.name:hover {
+    color: red;
+}
+.about {
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 500px;
+}
+.description {
+    text-align: left;
+    width: 500px;
+}
+img {
+    width: 500px;
+}
+.toggle:checked + section {
+    text-align: left;
+}
+.toggle:checked + section div.cart {
+    display: block;
+    margin: 0 auto;
+    width: 1700px;
+}
+.toggle:checked + section div .image {
+    display: inline-block;
+    margin: 0 auto;
+}
+.toggle:checked + section div .about {
+    display: inline-block;
+    margin: 0 auto;
+    vertical-align: top;
+}
+.toggle:checked + section div .description {
+    display: inline-block;
+    margin: 0 auto;
+    vertical-align: top;
+}
+.toggle {
+    height: 20px;
+    width: 20px;
+}
+.kindness {
+    display: inline-block;
+}
+.kindness > input {
+    display: none;
+}
+/* Order correctly by floating highest to the right */
+.kindness > label {
+    float: right;
+}
+/* The star of the show */
+.kindness > label:before {
+    display: inline-block;
+    font-size: 1.1rem;
+    padding: .3rem .2rem;
+    margin: 0;
+    cursor: pointer;
+    font-family: FontAwesome;
+    content: "\f005 "; /* full star */
+}
+/* Zero stars rating */
+.kindness > label:last-child:before {
+    content: "\f006 "; /* empty star outline */
+}
+/* Half star trick */
+.kindness .half:before {
+    content: "\f089 "; /* half star no outline */
+    position: absolute;
+    padding-right: 0;
+}
+/* Click + hover color */
+input:checked ~ label, /* color current and previous stars on checked */
+label:hover, label:hover ~ label { color: yellow;  } /* color previous stars on hover */
+
+/* Hover highlights */
+input:checked + label:hover, input:checked ~ label:hover, /* highlight current and previous stars */
+input:checked ~ label:hover ~ label, /* highlight previous selected stars for new rating */
+label:hover ~ input:checked ~ label /* highlight previous selected stars */ { color: yellow;  }
+.start {
+    display: none;
+}

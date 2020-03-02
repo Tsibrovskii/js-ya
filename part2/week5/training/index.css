@@ -1,0 +1,76 @@
+.animation {
+    width: 150px;
+    height: 150px;
+    background-color: #f00;
+
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+
+    animation-name: redBox;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+/* .animation {
+    width: 150px;
+    height: 150px;
+    background-color: #f00;
+
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+
+    animation-name: redBox;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;    
+} */
+
+.animation:hover {
+    background-color: #ff0;
+}
+
+@keyframes redBox {
+    0% {
+        transform: translate(0, 0);
+    }
+    12.5% {
+        transform: translateX(100px);
+    }
+    25% {
+        transform: translate(100px, 150px);
+    }
+    37.5%, 50% {
+        transform: translate(100px, 150px) scale(2) rotate(145deg);
+    }
+    62.5% {
+        transform: translate(100px, 150px) scale(2) rotate(0deg);
+    }
+    75% {
+        transform: translate(100px, 150px);
+    }
+    87.5% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* @keyframes redBox {
+    0% {
+        transform: translate(0, 0);
+    }
+    33% {
+        transform: translateX(100px);
+    }
+    67% {
+        transform: translate(100px, 150px);
+    }
+    100% {
+        transform: translate(100px, 150px) scale(2) rotate(145deg);
+    }
+} */

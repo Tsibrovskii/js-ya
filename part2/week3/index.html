@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Блог компании Яндекс.</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+    <div class="container2">
+      <div>
+        <div>1.1</div>
+      </div>
+      <div>
+        <div>2.1</div>
+        <div>2.2</div>
+      </div>
+      <div>
+        <div>3.1</div>
+        <div>3.2</div>
+        <div>3.3</div>
+      </div>
+    </div>
+    <div class="a1 a2" id="b1 b2">черный текст</div>
+    <style>
+      .container :first-child,
+      .container :last-child
+      {
+        color: red;
+      }
+      .container2 :only-child {
+        color: green;
+      }
+      * {
+        color: green;
+      }
+    </style>
+  </body>
+</html>

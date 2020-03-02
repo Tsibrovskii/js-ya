@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.vegetables {
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.cart {
+    display: inline-block;
+    margin: 20px;
+}
+.image {
+    width: 200px;
+}
+.apple,
+.descr {
+    display: none;
+}
+.descr {
+    width: 200px;
+}
+.radio {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+}
+.toggle1 {
+    transform: translate(-100%, -50%);
+}
+.toggle2 {
+    transform: translate(100%, -50%);
+}
+.toggle1:checked ~ .vegetables .cart.apple {
+    display: none;
+}
+.toggle1:checked ~ .vegetables .cart.carrot {
+    display: inline-block;
+}
+.toggle2:checked ~ .vegetables .cart.carrot {
+    display: none;
+}
+.toggle2:checked ~ .vegetables .cart.apple {
+    display: inline-block;
+}
+.cart:hover {
+    transform: scale(2);
+}
+.cart:hover .descr {
+    display: block;
+    transform: scale(.5);
+}

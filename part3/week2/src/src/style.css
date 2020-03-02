@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*--- - ---*/
+
+.catalog {
+  display: block;
+  position: relative;
+  width: calc(96vw - 60px);
+  margin: 100px auto 0;
+  width: 85%;
+}
+
+[type="checkbox"] {
+  display: none;
+}
+
+/*--- - ---*/
+
+.item {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  background-color: white;
+  max-width: 23%;
+  max-height: 60vh;
+  padding: 0.5%;
+  margin: 0.5%;
+  overflow: auto;
+  cursor: pointer;
+}
+
+.item_foto {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.item_desc {
+  display: none;
+}
+
+.item_close {
+  font-size: 80px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+/*--- - ---*/
+
+.item:hover {
+  background-color: white;
+  position: relative;
+  top: 40px;
+  transform: scale(1.2);
+  z-index: 1;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.4);
+}
+
+.item:hover .item_desc {
+  display: inline;
+}
+
+/*--- - ---*/
+
+#toggle1:checked~.catalog .item1, #toggle2:checked~.catalog .item2, #toggle3:checked~.catalog .item3, #toggle4:checked~.catalog .item4, #toggle5:checked~.catalog .item5, #toggle6:checked~.catalog .item6, #toggle7:checked~.catalog .item7, #toggle8:checked~.catalog .item8, #toggle9:checked~.catalog .item9, #toggle10:checked~.catalog .item10, #toggle11:checked~.catalog .item11, #toggle12:checked~.catalog .item12, #toggle13:checked~.catalog .item13, #toggle14:checked~.catalog .item14, #toggle15:checked~.catalog .item15, #toggle16:checked~.catalog .item16, #toggle17:checked~.catalog .item17, #toggle18:checked~.catalog .item18 {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 99;
+  width: 100%;
+  max-width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  background-color: rgba(99, 99, 99, 0.8);
+}
+
+#toggle1:checked~.catalog, #toggle2:checked~.catalog, #toggle3:checked~.catalog, #toggle4:checked~.catalog, #toggle5:checked~.catalog, #toggle6:checked~.catalog, #toggle7:checked~.catalog, #toggle8:checked~.catalog, #toggle9:checked~.catalog, #toggle10:checked~.catalog, #toggle11:checked~.catalog, #toggle12:checked~.catalog, #toggle13:checked~.catalog, #toggle14:checked~.catalog, #toggle15:checked~.catalog, #toggle16:checked~.catalog, #toggle17:checked~.catalog, #toggle18:checked~.catalog {
+  pointer-events: none;
+}
+
+#toggle1:checked~.catalog .item1:hover, #toggle2:checked~.catalog .item2:hover, #toggle3:checked~.catalog .item3:hover, #toggle4:checked~.catalog .item4:hover, #toggle5:checked~.catalog .item5:hover, #toggle6:checked~.catalog .item6:hover, #toggle7:checked~.catalog .item7:hover, #toggle8:checked~.catalog .item8:hover, #toggle9:checked~.catalog .item9:hover, #toggle10:checked~.catalog .item10:hover, #toggle11:checked~.catalog .item11:hover, #toggle12:checked~.catalog .item12:hover, #toggle13:checked~.catalog .item13:hover, #toggle14:checked~.catalog .item14:hover, #toggle15:checked~.catalog .item15:hover, #toggle16:checked~.catalog .item16:hover, #toggle17:checked~.catalog .item17:hover, #toggle18:checked~.catalog .item18:hover {
+  transform: scale(1);
+}
+
+#toggle1:checked~.catalog .item1 .item_desc, #toggle2:checked~.catalog .item2 .item_desc, #toggle3:checked~.catalog .item3 .item_desc, #toggle4:checked~.catalog .item4 .item_desc, #toggle5:checked~.catalog .item5 .item_desc, #toggle6:checked~.catalog .item6 .item_desc, #toggle7:checked~.catalog .item7 .item_desc, #toggle8:checked~.catalog .item8 .item_desc, #toggle9:checked~.catalog .item9 .item_desc, #toggle10:checked~.catalog .item10 .item_desc, #toggle11:checked~.catalog .item11 .item_desc, #toggle12:checked~.catalog .item12 .item_desc, #toggle13:checked~.catalog .item13 .item_desc, #toggle14:checked~.catalog .item14 .item_desc, #toggle15:checked~.catalog .item15 .item_desc, #toggle16:checked~.catalog .item16 .item_desc, #toggle17:checked~.catalog .item17 .item_desc, #toggle18:checked~.catalog .item18 .item_desc {
+  display: none;
+}
+
+#toggle1:checked~.catalog .item1 .item_close, #toggle2:checked~.catalog .item2 .item_close, #toggle3:checked~.catalog .item3 .item_close, #toggle4:checked~.catalog .item4 .item_close, #toggle5:checked~.catalog .item5 .item_close, #toggle6:checked~.catalog .item6 .item_close, #toggle7:checked~.catalog .item7 .item_close, #toggle8:checked~.catalog .item8 .item_close, #toggle9:checked~.catalog .item9 .item_close, #toggle10:checked~.catalog .item10 .item_close, #toggle11:checked~.catalog .item11 .item_close, #toggle12:checked~.catalog .item12 .item_close, #toggle13:checked~.catalog .item13 .item_close, #toggle14:checked~.catalog .item14 .item_close, #toggle15:checked~.catalog .item15 .item_close, #toggle16:checked~.catalog .item16 .item_close, #toggle17:checked~.catalog .item17 .item_close, #toggle18:checked~.catalog .item18 .item_close {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 30px;
+  pointer-events: all;
+  z-index: 199;
+}
+
+#toggle1:checked~.catalog .item1 .item_close:hover, #toggle2:checked~.catalog .item2 .item_close:hover, #toggle3:checked~.catalog .item3 .item_close:hover, #toggle4:checked~.catalog .item4 .item_close:hover, #toggle5:checked~.catalog .item5 .item_close:hover, #toggle6:checked~.catalog .item6 .item_close:hover, #toggle7:checked~.catalog .item7 .item_close:hover, #toggle8:checked~.catalog .item8 .item_close:hover, #toggle9:checked~.catalog .item9 .item_close:hover, #toggle10:checked~.catalog .item10 .item_close:hover, #toggle11:checked~.catalog .item11 .item_close:hover, #toggle12:checked~.catalog .item12 .item_close:hover, #toggle13:checked~.catalog .item13 .item_close:hover, #toggle14:checked~.catalog .item14 .item_close:hover, #toggle15:checked~.catalog .item15 .item_close:hover, #toggle16:checked~.catalog .item16 .item_close:hover, #toggle17:checked~.catalog .item17 .item_close:hover, #toggle18:checked~.catalog .item18 .item_close:hover {
+  color: red;
+}
+
+#toggle1:checked~.catalog .item1 .item_foto, #toggle2:checked~.catalog .item2 .item_foto, #toggle3:checked~.catalog .item3 .item_foto, #toggle4:checked~.catalog .item4 .item_foto, #toggle5:checked~.catalog .item5 .item_foto, #toggle6:checked~.catalog .item6 .item_foto, #toggle7:checked~.catalog .item7 .item_foto, #toggle8:checked~.catalog .item8 .item_foto, #toggle9:checked~.catalog .item9 .item_foto, #toggle10:checked~.catalog .item10 .item_foto, #toggle11:checked~.catalog .item11 .item_foto, #toggle12:checked~.catalog .item12 .item_foto, #toggle13:checked~.catalog .item13 .item_foto, #toggle14:checked~.catalog .item14 .item_foto, #toggle15:checked~.catalog .item15 .item_foto, #toggle16:checked~.catalog .item16 .item_foto, #toggle17:checked~.catalog .item17 .item_foto, #toggle18:checked~.catalog .item18 .item_foto {
+  position: relative;
+  width: 80vw;
+  height: auto;
+  max-width: 80vh;
+  padding: 0;
+  margin: 10vh auto;
+}

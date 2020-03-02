@@ -1,0 +1,135 @@
+     {
+         border: 1px solid red;
+     }
+     
+     .root {
+         width: auto;
+     }
+     
+     input[value="line"]:checked~.root>.item {
+         display: block;
+     }
+     
+     input[value="line"]:checked~.root>.item>.box {
+         display: inline-block;
+         vertical-align: top;
+     }
+     
+     input[value="block"]:checked~.root>.item {
+         display: inline-block;
+     }
+     
+     input[value="line"]:checked~.root>.box {
+         display: block;
+     }
+     
+     .item {}
+     
+     .box {
+         width: 270px;
+         position: relative;
+     }
+     
+     .img {
+         display: inline-block;
+         height: 240px;
+     }
+     
+     .image {
+         position: absolute;
+         bottom: 0%;
+         left: 50%;
+         transform: translateX(-50%);
+     }
+     
+     .img:hover+.info a p {
+         color: red;
+     }
+     
+     .name:hover {
+         color: red;
+     }
+     
+     .img:hover {
+         opacity: 0.7;
+     }
+     
+     .info {
+         height: 100px;
+     }
+     
+     .-info {
+         text-overflow: ellipsis;
+         white-space: nowrap;
+         overflow: hidden;
+         font-family: Arial, Helvetica, sans-serif;
+     }
+     
+     .name {
+         font-size: 100%;
+         color: blue;
+         text-decoration: underline;
+         margin: 0;
+     }
+     
+     .group {
+         font-size: 60%;
+         color: grey;
+         text-decoration: underline;
+         margin: 0;
+     }
+     
+     .price {
+         font-size: 90%;
+         color: rgb(175, 13, 13);
+         font-weight: bold;
+         margin: 0;
+     }
+     
+     .sale {
+         font-size: 70%;
+         color: grey;
+         text-decoration: line-through;
+         margin: 0;
+     }
+     
+     .disc {
+         height: 200px;
+     }
+     
+     .p-disc {
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 85%;
+         margin: 0;
+     }
+     
+     .rating {
+         width: 130px;
+         height: 25px;
+     }
+     
+     .rating input[type="radio"] {
+         display: none;
+     }
+     
+     .label_rating {
+         float: right;
+         display: block;
+         width: 13px;
+         height: 25px;
+         cursor: pointer;
+     }
+     
+     .label_r {
+         background: url(star/rating_r.png) no-repeat 50% 0;
+     }
+     
+     .label_l {
+         background: url(star/rating_l.png) no-repeat 50% 0;
+     }
+     
+     .rating .label_rating:hover,
+     .rating .label_rating:hover~.label_rating,
+     .rating input[type="radio"]:checked~.label_rating {
+         background-position: 50% -25px;
+     }
